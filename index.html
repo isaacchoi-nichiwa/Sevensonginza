@@ -769,6 +769,111 @@ footer {
 }
 footer.footer { border-top: 1px solid var(--border); padding: 80px 5vw 50px; text-align: center; background: var(--bg); }
 
+/* ============ Concept · Team partner block ============ */
+.concept-team {
+  margin: 40px 0 32px;
+  padding: 32px clamp(28px, 4vw, 48px);
+  background: rgba(255,250,240,0.5);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+.concept-team .team-tag {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.concept-team .team-title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+.concept-team .team-title em {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 300;
+}
+.concept-team .team-body {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--text);
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.concept-team .team-body:last-child {
+  margin-bottom: 0;
+}
+
+.concept-team .team-photo {
+  margin: 24px 0 18px;
+  padding: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+.concept-team .team-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+}
+.concept-team .team-photo figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.concept-team .team-photo-cap {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text);
+  letter-spacing: 0.04em;
+}
+.concept-team .team-photo-cap-tc {
+  font-family: var(--serif);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.16em;
+  font-style: italic;
+}
+
+/* ============ Axonometric narrative ============ */
+.axo-narrative {
+  max-width: 980px;
+  margin: 28px auto 0;
+  padding: 0 clamp(20px, 3vw, 40px);
+}
+.axo-narrative p {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--text);
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.axo-narrative em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media print {
+  .concept-team { page-break-inside: avoid; break-inside: avoid-page; }
+}
+
 /* SVG floorplan styling — LIGHT theme (cream washi canvas, ink walls, restrained accents) */
 .fp-bg { fill: #ede4d0; }
 .fp-wall { fill: none; stroke: #1a1815; stroke-width: 1.5; }
@@ -992,6 +1097,27 @@ section.axonometric {
     
   </div>
 
+  <div class="concept-team">
+    <div class="team-tag">執 行 團 隊 · DESIGN &amp; BUILD PARTNER</div>
+    <h3 class="team-title">三 越 伊 勢 丹 設 計 團 隊 · <em>Mitsukoshi Isetan Property Design</em></h3>
+    <p class="team-body">
+      本案之設計與施工，將由<em style="color:var(--gold);font-style:normal">三越伊勢丹建築設計團隊</em>（Mitsukoshi Isetan Property Design）擔任。三越伊勢丹乃日本百貨業之老字號，旗下設計部承接日本國內外高級商業空間之深化設計與施工監理，工藝與細節向以嚴謹著稱。
+    </p>
+    <p class="team-body">
+      該團隊已為合作方完成<em style="color:var(--gold);font-style:normal">茅台大樓地下一層</em>之改建——「<em style="color:var(--gold);font-style:normal">House of Nichiwa</em>」（日和家）已於是處實現開幕，作為合作方旗下之中華文化體驗展示空間。其與七、八樓之餐飲樓層在同一建築之中，工藝、材料、施工水準已有實證；本案上下樓層之延續性與品質一致性，因此團隊之繼續參與而得以保證。
+    </p>
+    <figure class="team-photo">
+      <img src="IMG-20260427-WA0000.jpg" alt="House of Nichiwa · 茅台大樓 B1F"/>
+      <figcaption>
+        <span class="team-photo-cap">House of Nichiwa &middot; 日和家</span>
+        <span class="team-photo-cap-tc">茅台大樓 B1F &nbsp;·&nbsp; 已於 2025 年由三越伊勢丹設計團隊完成</span>
+      </figcaption>
+    </figure>
+    <p class="team-body" style="font-size:13px;color:var(--muted);font-style:italic;margin-top:18px">
+      註：本提案為設計概念稿，實際深化設計、施工圖、工程預算等，由三越伊勢丹團隊與合作方依各自專業範疇推進。
+    </p>
+  </div>
+
   <div class="pillars">
     <div class="pillar">
       <div class="pillar-num">— I</div>
@@ -1011,7 +1137,7 @@ section.axonometric {
       <div class="pillar-num">— III</div>
       <div class="pillar-title">傳 承 · HERITAGE</div>
       <div class="pillar-body">
-        圓桌、轉盤、明朝供桌、書法掛軸——圓桌、轉盤、明朝家具——粵菜宴客之傳統元素，按銀座尺度量度。
+        四間包廂以集團既有之四地命名——上海、香港、北京、銀座。圓桌、轉盤、明朝家具、書法掛軸，按銀座尺度量度。
       </div>
     </div>
   </div>
@@ -1052,7 +1178,7 @@ section.axonometric {
       <div class="label">總面積</div>
       <div class="value">約 410 m²</div>
       <div class="label" style="margin-top:16px">容量</div>
-      <div class="value">大包廂 · 福 (12) &nbsp;+&nbsp; 散席 6 桌 (24) &nbsp;=&nbsp; 36</div>
+      <div class="value">上海廳 (12) &nbsp;+&nbsp; 散席 6 桌 (24) &nbsp;=&nbsp; 36</div>
       <div class="label" style="margin-top:16px">參照</div>
       <div class="value">茅台大樓 7F · 既有圖則 D-013</div>
     </div>
@@ -1284,7 +1410,7 @@ section.axonometric {
       </g>
 
       <!-- ============ DINING ZONES ============ -->
-      <!-- 包 廂 · 福(top half) — Layout A: single ø1.5m round table for 12 -->
+      <!-- 上海廳(top half) — Layout A: single ø1.5m round table for 12 -->
       <g>
         <!-- Round dining table (ø1.5m equivalent) -->
         <circle cx="870" cy="140" r="50" class="fp-furniture-table"/>
@@ -1396,7 +1522,7 @@ section.axonometric {
         <text class="fp-label-small" x="690" y="282" text-anchor="middle">接待 · 玄關 · 精簡</text>
 
         <!-- GRAND PRIVATE ROOM (top half) -->
-        <text class="fp-label" x="870" y="78" text-anchor="middle" font-size="18" font-weight="600" font-style="italic" fill="#b8985a">包 廂 · 福</text>
+        <text class="fp-label" x="870" y="78" text-anchor="middle" font-size="18" font-weight="600" font-style="italic" fill="#b8985a">上海廳</text>
         <text class="fp-label-jp" x="870" y="90" text-anchor="middle">十六位</text>
         <text class="fp-label-area" x="870" y="220" text-anchor="middle">≈ 82 m²&nbsp;&nbsp;·&nbsp;&nbsp;12 guests · two layouts</text>
 
@@ -1531,7 +1657,7 @@ section.axonometric {
       <div class="label">總面積</div>
       <div class="value">約 410 m²</div>
       <div class="label" style="margin-top:16px">容量</div>
-      <div class="value">壽 (16) &nbsp;+&nbsp; 祿 (10) &nbsp;+&nbsp; 喜 (8) &nbsp;=&nbsp; 34 &nbsp;·&nbsp; 全私密包廂</div>
+      <div class="value">香港廳 (16) &nbsp;+&nbsp; 北京廳 (10) &nbsp;+&nbsp; 銀座廳 (8) &nbsp;=&nbsp; 34 · 全私密</div>
       <div class="label" style="margin-top:16px">參照</div>
       <div class="value">茅台大樓 8F · 既有圖則 D-014</div>
     </div>
@@ -1757,7 +1883,7 @@ section.axonometric {
       </g>
 
       <!-- ============ PRIVATE ROOMS (8F — premium / larger feel) ============ -->
-      <!-- Room C (top) - 包 廂 · 壽 16 seats matching FoH -->
+      <!-- Room C (top) - 香港廳 16 seats matching FoH -->
       <g>
         <!-- Round table ø1.8m -->
         <circle cx="870" cy="140" r="62" class="fp-furniture-table" stroke-width="1.2"/>
@@ -1900,7 +2026,7 @@ section.axonometric {
     <div class="legend-item">
       <span class="legend-swatch" style="background: rgba(138,58,53,0.3); border-color:#8a3a35"></span>
       <div>
-        <span class="legend-name">Premium Private / 個室</span>
+        <span class="legend-name">Private Room / 包廂</span>
         <span class="legend-area">2 × ≈ 60 m²</span>
       </div>
     </div>
@@ -1940,7 +2066,7 @@ section.axonometric {
     <div class="zone-card">
       <div class="zone-card-num">— 03</div>
       <div class="zone-card-title">三 間 私 密 包 廂</div>
-      <div class="zone-card-title-jp">大 包 廂 「 壽 」</div>
+      <div class="zone-card-title-jp">香 港 廳 · Hong Kong</div>
       <p class="zone-card-desc">
         八樓北面設「香港廳」一間，約 63 ㎡，配 ø 1.8m 圓桌與黃銅轉盤、明朝供桌、六曲屏風一隻——銀座之上最有格之席，宜作家族慶事、企業典禮、外賓接待。
       </p>
@@ -2672,15 +2798,15 @@ section.axonometric {
         <div class="foh-note">
           <span class="foh-note-num">01</span>
           <div>
-            <div class="foh-note-en"><em>One grand suite — <span style="color:#6e5536">「壽」</span></em></div>
-            <div class="foh-note-jp">八樓北側設大包廂「壽」一間，十六位，直徑一點八米圓桌。明朝供桌、六曲屏風一隻。為銀座高層中最有格之間，宜作家族慶事、企業典禮、外賓接待。</div>
+            <div class="foh-note-en"><em>Largest private — <span style="color:#6e5536">Hong Kong · 香港廳</span></em></div>
+            <div class="foh-note-jp">八樓北側設香港廳一間，十六位，直徑一點八米暖色橡木圓桌。明朝供桌、六曲屏風一隻。為銀座高層中最有格之席，宜作家族慶事、企業典禮、外賓接待。</div>
           </div>
         </div>
         <div class="foh-note">
           <span class="foh-note-num">02</span>
           <div>
             <div class="foh-note-en"><em>八樓三間包廂之擺設。</em></div>
-            <div class="foh-note-jp">中段設「祿」一間，圓桌一張，十位；南側設「喜」一間，方桌一張，八位。三間包廂全部臨東面落地窗，景觀均勻分配，戶戶見銀座夜色。
+            <div class="foh-note-jp">中段設北京廳一間，圓桌一張，十位；南側設銀座廳一間，方桌一張，八位。三間包廂東牆均設障子假窗（和紙嵌板），光線均勻散發，戶戶有寬敞明亮之感。
           </div>
         </div>
         <div class="foh-note">
@@ -2712,176 +2838,204 @@ section.axonometric {
 
 <!-- ============ 3D AXONOMETRIC ============ -->
 <section class="axonometric">
-  <div class="section-tag">05 &nbsp;·&nbsp; 立 體 圖 · AXONOMETRIC</div>
-  <h2 class="section-title"><em>立 體</em> · 兩 層 樓。</h2>
-  <p class="section-sub">立體投影 · 7F · 8F</p>
+  <div class="section-tag">05 &nbsp;·&nbsp; 立 體 概 觀 · AXONOMETRIC</div>
+  <h2 class="section-title">兩層樓 <em>之 上 下</em>。</h2>
+  <p class="section-sub">立體分層投影 · 7F &amp; 8F · 客流動線示意</p>
 
   <div class="axo-wrap">
-    <svg class="axo-svg" viewBox="0 0 1200 1100" width="1100" height="1008" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <svg class="axo-svg" viewBox="0 0 1200 900" width="1100" height="825" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="axo-floor-7f" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#e8dcc4"/>
-          <stop offset="100%" stop-color="#d4c2a0"/>
-        </linearGradient>
-        <linearGradient id="axo-floor-8f" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#ede4d0"/>
+        <linearGradient id="axo-slab-8f" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#f0e6d2"/>
           <stop offset="100%" stop-color="#dccdaa"/>
         </linearGradient>
-        <linearGradient id="axo-wall-light" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#d4c2a0"/>
-          <stop offset="100%" stop-color="#b4956b"/>
+        <linearGradient id="axo-slab-7f" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#ede4d0"/>
+          <stop offset="100%" stop-color="#d4c2a0"/>
         </linearGradient>
-        <linearGradient id="axo-wall-dark" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stop-color="#b4956b"/>
+        <linearGradient id="axo-side" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#c8b896"/>
           <stop offset="100%" stop-color="#8c7038"/>
         </linearGradient>
+        <pattern id="axo-corridor" patternUnits="userSpaceOnUse" width="8" height="8">
+          <line x1="0" y1="8" x2="8" y2="0" stroke="rgba(140,112,56,0.18)" stroke-width="0.5"/>
+        </pattern>
       </defs>
 
-      <rect x="0" y="0" width="1200" height="1100" fill="#f5ede0"/>
+      <rect x="0" y="0" width="1200" height="900" fill="#f5ede0"/>
 
-      <!-- Title block -->
+      <!-- Title -->
       <g font-family="Cormorant Garamond, serif" font-style="italic" fill="#6e5536">
-        <text x="60" y="50" font-size="13" letter-spacing="0.18em">— AXONOMETRIC · 30° / 30° ISO —</text>
-        <text x="60" y="70" font-size="10" letter-spacing="0.12em">立 体 投 影 図</text>
+        <text x="60" y="48" font-size="14" letter-spacing="0.2em">— AXONOMETRIC · 30° ISO —</text>
+        <text x="60" y="64" font-size="10" letter-spacing="0.15em">立 體 投 影 · 7F &amp; 8F</text>
       </g>
 
-      <!-- ============ 8F (top, drawn first behind, then 7F overlays in front) ============ -->
-      <!-- Cabinet projection: dx = +0.866*y_plan, dy = +0.5*y_plan, walls rise upward (subtract from y_screen) -->
-      <!-- Plan dimensions: 14m × 12.9m at 32px/m = 448 × 413 px -->
-      <!-- Floor offsets: 8F floor at screen (origin), 7F floor at +260px below -->
+      <!-- ============ 8F (drawn first, sits behind/above) ============ -->
+      <!-- Origin shifts: dx = 0.866*y_plan, dy = 0.5*y_plan; floor sits at z=0 (8F) -->
+      <!-- Plan size: 14m × 13m at 30 px/m = 420 × 390 px -->
+      <!-- 8F floor anchor: top-left at (300, 130) -->
 
-      <g transform="translate(220, 200)">
-        <!-- 8F floor slab -->
-        <polygon points="0,0 448,0 654,206 206,206" fill="url(#axo-floor-8f)" stroke="#6e5536" stroke-width="0.6"/>
-        <text x="-30" y="105" font-family="Cormorant Garamond, serif" font-style="italic" font-size="20" fill="#8c7038">8F</text>
+      <g transform="translate(300, 130)">
+        <!-- Slab thickness sides -->
+        <polygon points="0,0 0,18 195,213 195,195" fill="url(#axo-side)" stroke="#8c7038" stroke-width="0.6"/>
+        <polygon points="0,18 195,213 615,213 420,18" fill="url(#axo-side)" opacity="0.6"/>
 
-        <!-- 8F walls (rising 80px = ~2.5m) -->
-        <!-- Outer envelope walls -->
-        <!-- Back-left wall (along plan x=0, rising up) -->
-        <polygon points="0,0 206,206 206,126 0,-80" fill="url(#axo-wall-dark)" stroke="rgba(110,85,54,0.20)" stroke-width="0.5"/>
-        <!-- Back-right wall (along plan y=0) -->
-        <polygon points="0,0 448,0 448,-80 0,-80" fill="url(#axo-wall-light)" stroke="rgba(110,85,54,0.20)" stroke-width="0.5" opacity="0.85"/>
+        <!-- 8F floor surface -->
+        <polygon points="0,0 420,0 615,195 195,195" fill="url(#axo-slab-8f)" stroke="#6e5536" stroke-width="0.8"/>
 
-        <!-- Toilet zone (top-left in plan: x=0-3, y=0-7.5m at 32px/m = 0-96, 0-240 in plan) -->
-        <!-- Zone fill on floor -->
-        <polygon points="0,0 96,0 224,128 128,128" fill="rgba(74,104,85,0.18)"/>
-        <text x="120" y="80" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6e5536">Restrooms · 洗 手 間</text>
-        <!-- Internal partition -->
-        <polygon points="96,0 224,128 224,68 96,-60" fill="rgba(180,149,107,0.45)" stroke="rgba(110,85,54,0.20)" stroke-width="0.3"/>
+        <!-- Service strip (left of corridor) — toilets + vestibule + pantry -->
+        <polygon points="0,0 60,0 255,195 195,195" fill="rgba(110,85,54,0.10)" stroke="rgba(110,85,54,0.4)" stroke-width="0.4"/>
 
-        <!-- Tea Lounge / Host (bottom-left: x=0-3, y=9-12.9m = 0-96, 288-413 in plan) -->
-        <polygon points="144,144 96+144,144 96+144+128,144+128 144+128,144+128" fill="rgba(110,85,54,0.06)"/>
-        <text x="135" y="195" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#b8985a">Tea Lounge</text>
+        <!-- Corridor (1m wide strip) -->
+        <polygon points="60,0 80,0 275,195 255,195" fill="url(#axo-corridor)" stroke="rgba(140,112,56,0.5)" stroke-width="0.4"/>
 
-        <!-- 包 廂 · 壽 (top-right: x=6-14, y=0-6.4m = 192-448, 0-205 in plan) -->
-        <polygon points="192,0 448,0 553,105 297,105" fill="rgba(138,58,53,0.14)"/>
-        <text x="340" y="60" font-family="Cormorant Garamond, serif" font-style="italic" font-size="14" fill="#b8985a">包 廂 · 壽</text>
-        <!-- Round table representation (3D ring) -->
-        <ellipse cx="370" cy="78" rx="28" ry="14" fill="#b4956b" stroke="#8c7038" stroke-width="0.8"/>
-        <ellipse cx="370" cy="73" rx="28" ry="14" fill="#e8dcc4" stroke="#8c7038" stroke-width="0.5"/>
-        <text x="370" y="78" font-family="Cormorant Garamond, serif" font-style="italic" font-size="8" fill="#8c7038" text-anchor="middle">16</text>
+        <!-- Hong Kong room (top-right, biggest) -->
+        <polygon points="80,0 420,0 615,195 275,195" fill="rgba(184,152,90,0.12)" stroke="rgba(140,112,56,0.5)" stroke-width="0.5"/>
 
-        <!-- 8F: 中包廂 (Lu, 10) middle-right -->
-        <polygon points="192,128 448,128 521,201 265,201" fill="rgba(138,58,53,0.10)"/>
-        <text x="340" y="170" font-family="Cormorant Garamond, serif" font-style="italic" font-size="10" fill="#b8985a">包 廂 · 中 (10)</text>
-        <ellipse cx="370" cy="180" rx="18" ry="9" fill="#b4956b" stroke="#8c7038" stroke-width="0.6"/>
+        <!-- HK room interior table — circle with chairs -->
+        <ellipse cx="270" cy="100" rx="32" ry="18" fill="#b4956b" stroke="#6e5536" stroke-width="0.8"/>
+        <ellipse cx="270" cy="98" rx="22" ry="12" fill="#dccdaa" stroke="#8c7038" stroke-width="0.5"/>
+        <text x="270" y="102" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6e5536">16</text>
 
-        <!-- 8F: 小包廂 (Xi, 8) bottom-right -->
-        <polygon points="265,201 521,201 553,233 297,233" fill="rgba(138,58,53,0.08)"/>
-        <text x="340" y="220" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#b8985a">包 廂 · 小 (8)</text>
-        <rect x="350" y="218" width="40" height="10" fill="#b4956b" stroke="#8c7038" stroke-width="0.5"/>
-      </g>
+        <!-- Beijing room divider (mid horizontal cut) -->
+        <line x1="80" y1="80" x2="420" y2="80" stroke="#6e5536" stroke-width="0.6" stroke-dasharray="3 2" opacity="0.4"/>
 
-      <!-- ============ 7F (drawn below 8F, in front) ============ -->
-      <g transform="translate(220, 600)">
-        <!-- 7F floor slab -->
-        <polygon points="0,0 448,0 654,206 206,206" fill="url(#axo-floor-7f)" stroke="#6e5536" stroke-width="0.7"/>
-        <text x="-30" y="105" font-family="Cormorant Garamond, serif" font-style="italic" font-size="20" fill="#8c7038">7F</text>
+        <!-- 8F label -->
+        <text x="-30" y="100" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#8c7038" font-weight="600" text-anchor="end" letter-spacing="0.1em">8F</text>
 
-        <!-- Walls -->
-        <polygon points="0,0 206,206 206,126 0,-80" fill="url(#axo-wall-dark)" stroke="rgba(110,85,54,0.20)" stroke-width="0.5"/>
-        <polygon points="0,0 448,0 448,-80 0,-80" fill="url(#axo-wall-light)" stroke="rgba(110,85,54,0.20)" stroke-width="0.5" opacity="0.85"/>
+        <!-- Room labels with leaders -->
+        <g font-family="Cormorant Garamond, serif" font-style="italic" font-size="11" fill="#1a1815">
+          <!-- Hong Kong -->
+          <line x1="270" y1="90" x2="490" y2="-20" stroke="#8c7038" stroke-width="0.5" stroke-dasharray="2 2"/>
+          <text x="495" y="-22">Hong Kong · 香港廳</text>
+          <text x="495" y="-8" font-size="9" fill="#6e5536">大包廂 · 16位 · ø1.8m</text>
 
-        <!-- Kitchen (left, plan x=0-3.3m, y=0-12.9m → 0-105, 0-413) -->
-        <polygon points="0,0 105,0 311,206 206,206" fill="rgba(140,112,56,0.08)"/>
-        <text x="115" y="120" font-family="Cormorant Garamond, serif" font-style="italic" font-size="11" fill="#8c7038">Kitchen 廚 房</text>
-        <!-- Dumbwaiter symbol -->
-        <rect x="50" y="80" width="22" height="22" fill="#b4956b" stroke="#8c7038" stroke-width="0.6"/>
-        <text x="61" y="95" font-family="Cormorant Garamond, serif" font-style="italic" font-size="8" fill="#8c7038" text-anchor="middle">DW</text>
+          <!-- Beijing -->
+          <line x1="320" y1="120" x2="520" y2="50" stroke="#8c7038" stroke-width="0.5" stroke-dasharray="2 2"/>
+          <text x="525" y="48">Beijing · 北京廳</text>
+          <text x="525" y="62" font-size="9" fill="#6e5536">中包廂 · 10位 · ø1.4m</text>
 
-        <!-- Core (middle) -->
-        <polygon points="105,0 192,0 397,206 311,206" fill="rgba(138,125,101,0.16)" stroke="rgba(110,85,54,0.20)" stroke-width="0.3"/>
-        <text x="220" y="100" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6e5536">CORE · EV · 既存</text>
+          <!-- Ginza -->
+          <line x1="380" y1="170" x2="555" y2="120" stroke="#8c7038" stroke-width="0.5" stroke-dasharray="2 2"/>
+          <text x="560" y="118">Ginza · 銀座廳</text>
+          <text x="560" y="132" font-size="9" fill="#6e5536">小包廂 · 8位 · 長方桌</text>
+        </g>
 
-        <!-- Restroom zone (top-left of FoH: x=6-9m, y=0-7.5m → 192-288, 0-240) -->
-        <polygon points="192,0 288,0 416,128 320,128" fill="rgba(74,104,85,0.18)"/>
-        <text x="265" y="60" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6e5536">Restrooms · 3 室</text>
-
-        <!-- Reception (bottom-left of FoH: x=6-9m, y=9-12.9m → 192-288, 288-413) -->
-        <polygon points="192,144 288,144 416,272 320,272" fill="rgba(110,85,54,0.06)"/>
-        <text x="265" y="200" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#b8985a">Reception</text>
-
-        <!-- 包 廂 · 福(top-right) -->
-        <polygon points="288,0 448,0 553,105 393,105" fill="rgba(138,58,53,0.14)"/>
-        <text x="395" y="50" font-family="Cormorant Garamond, serif" font-style="italic" font-size="13" fill="#b8985a">包 廂 · 福</text>
-        <!-- Round table -->
-        <ellipse cx="420" cy="78" rx="26" ry="13" fill="#b4956b" stroke="#8c7038" stroke-width="0.8"/>
-        <ellipse cx="420" cy="73" rx="26" ry="13" fill="#e8dcc4" stroke="#8c7038" stroke-width="0.5"/>
-        <text x="420" y="78" font-family="Cormorant Garamond, serif" font-style="italic" font-size="8" fill="#8c7038" text-anchor="middle">16</text>
-
-        <!-- Open Dining (bottom-right) -->
-        <polygon points="288,128 448,128 553,233 393,233" fill="rgba(140,112,56,0.10)"/>
-        <text x="395" y="180" font-family="Cormorant Garamond, serif" font-style="italic" font-size="11" fill="#8c7038">Open Dining · 6 卓 · 24 名</text>
-        <!-- 6 small tables in 2 rows -->
-        <g fill="#b4956b" stroke="#8c7038" stroke-width="0.4">
-          <rect x="305" y="155" width="22" height="14"/>
-          <rect x="345" y="155" width="32" height="14"/>
-          <rect x="395" y="155" width="22" height="14"/>
-          <rect x="320" y="195" width="14" height="14"/>
-          <rect x="355" y="195" width="22" height="14"/>
-          <rect x="395" y="195" width="22" height="14"/>
+        <!-- Service annotations -->
+        <g font-family="Cormorant Garamond, serif" font-style="italic" font-size="8" fill="#6e5536">
+          <text x="20" y="50" transform="rotate(28 20 50)">W.C. ×2</text>
+          <text x="50" y="120" transform="rotate(28 50 120)">玄關</text>
+          <text x="80" y="180" transform="rotate(28 80 180)">茶水間</text>
         </g>
       </g>
 
-      <!-- Vertical riser linking the two floors -->
-      <g stroke="#8c7038" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.5">
-        <line x1="320" y1="406" x2="320" y2="600"/>
-        <line x1="368" y1="430" x2="368" y2="624"/>
-      </g>
-      <text x="270" y="525" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6e5536" letter-spacing="0.1em">— PLUMBING RISER —</text>
-      <text x="270" y="540" font-family="Noto Serif JP, serif" font-size="7.5" fill="#6e5536" letter-spacing="0.05em">水 道 立 管</text>
-
-      <!-- North arrow + scale -->
-      <g transform="translate(1100, 100)">
-        <circle cx="0" cy="0" r="20" fill="none" stroke="#8c7038" stroke-width="0.8"/>
-        <polygon points="0,-15 6,8 0,2 -6,8" fill="#8c7038"/>
-        <text x="0" y="-22" font-family="Cormorant Garamond, serif" font-size="11" fill="#8c7038" text-anchor="middle" font-weight="600">N</text>
-        <text x="0" y="40" font-family="Cormorant Garamond, serif" font-style="italic" font-size="8" fill="#6e5536" text-anchor="middle">north</text>
+      <!-- ============ Vertical separator showing core / EV ============ -->
+      <g transform="translate(80, 380)">
+        <line x1="0" y1="0" x2="0" y2="100" stroke="#8c7038" stroke-width="1.2"/>
+        <text x="-5" y="55" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6e5536" text-anchor="end" transform="rotate(-90 -5 55)">food lift · 送餐電梯</text>
       </g>
 
-      <!-- Legend -->
-      <g transform="translate(60, 1000)" font-family="Cormorant Garamond, serif" font-size="9" fill="#6e5536">
-        <text x="0" y="0" font-style="italic" letter-spacing="0.18em">— LEGEND —</text>
-        <rect x="0" y="14" width="14" height="10" fill="rgba(140,112,56,0.08)" stroke="#8c7038" stroke-width="0.4"/>
-        <text x="22" y="22">Kitchen</text>
-        <rect x="80" y="14" width="14" height="10" fill="rgba(138,125,101,0.16)" stroke="#6e5536" stroke-width="0.4"/>
-        <text x="102" y="22">Core (existing)</text>
-        <rect x="200" y="14" width="14" height="10" fill="rgba(74,104,85,0.18)" stroke="#4a6855" stroke-width="0.4"/>
-        <text x="222" y="22">Restrooms</text>
-        <rect x="295" y="14" width="14" height="10" fill="rgba(110,85,54,0.06)" stroke="#b8985a" stroke-width="0.4"/>
-        <text x="317" y="22">Reception · 接待</text>
-        <rect x="430" y="14" width="14" height="10" fill="rgba(138,58,53,0.14)" stroke="#8a3a35" stroke-width="0.4"/>
-        <text x="452" y="22">私 密 包 廂</text>
-        <rect x="580" y="14" width="14" height="10" fill="rgba(140,112,56,0.10)" stroke="#8c7038" stroke-width="0.4"/>
-        <text x="602" y="22">Open Dining</text>
+      <!-- ============ 7F (drawn second, sits below) ============ -->
+      <g transform="translate(220, 480)">
+        <!-- Slab sides -->
+        <polygon points="0,0 0,18 215,233 215,215" fill="url(#axo-side)" stroke="#8c7038" stroke-width="0.6"/>
+        <polygon points="0,18 215,233 645,233 430,18" fill="url(#axo-side)" opacity="0.6"/>
+
+        <!-- 7F floor surface — slightly bigger (251 ㎡ vs 203 ㎡) -->
+        <polygon points="0,0 430,0 645,215 215,215" fill="url(#axo-slab-7f)" stroke="#6e5536" stroke-width="0.8"/>
+
+        <!-- Service strip -->
+        <polygon points="0,0 60,0 275,215 215,215" fill="rgba(110,85,54,0.10)" stroke="rgba(110,85,54,0.4)" stroke-width="0.4"/>
+
+        <!-- Corridor -->
+        <polygon points="60,0 80,0 295,215 275,215" fill="url(#axo-corridor)" stroke="rgba(140,112,56,0.5)" stroke-width="0.4"/>
+
+        <!-- Shanghai room (top-right portion) -->
+        <polygon points="80,0 280,0 485,205 295,205" fill="rgba(184,152,90,0.12)" stroke="rgba(140,112,56,0.5)" stroke-width="0.5"/>
+
+        <!-- Shanghai round table -->
+        <ellipse cx="240" cy="105" rx="28" ry="14" fill="#b4956b" stroke="#6e5536" stroke-width="0.8"/>
+        <ellipse cx="240" cy="103" rx="18" ry="9" fill="#dccdaa" stroke="#8c7038" stroke-width="0.5"/>
+        <text x="240" y="107" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6e5536">12</text>
+
+        <!-- Open dining (south of Shanghai, 6 small tables) -->
+        <polygon points="80,90 430,90 645,215 295,215" fill="rgba(140,112,56,0.06)" stroke="rgba(140,112,56,0.5)" stroke-width="0.5"/>
+
+        <!-- Open dining tables — 6 small squares -->
+        <g fill="#b4956b" stroke="#6e5536" stroke-width="0.5">
+          <rect x="160" y="120" width="20" height="14"/>
+          <rect x="220" y="135" width="20" height="14"/>
+          <rect x="280" y="150" width="20" height="14"/>
+          <rect x="180" y="165" width="20" height="14"/>
+          <rect x="240" y="180" width="20" height="14"/>
+          <rect x="300" y="195" width="20" height="14"/>
+        </g>
+
+        <!-- 7F label -->
+        <text x="-30" y="100" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#8c7038" font-weight="600" text-anchor="end" letter-spacing="0.1em">7F</text>
+
+        <!-- Room labels with leaders -->
+        <g font-family="Cormorant Garamond, serif" font-style="italic" font-size="11" fill="#1a1815">
+          <!-- Shanghai -->
+          <line x1="245" y1="90" x2="495" y2="-15" stroke="#8c7038" stroke-width="0.5" stroke-dasharray="2 2"/>
+          <text x="500" y="-18">Shanghai · 上海廳</text>
+          <text x="500" y="-4" font-size="9" fill="#6e5536">大包廂 · 12位 · 兩種擺設</text>
+
+          <!-- Open dining -->
+          <line x1="240" y1="170" x2="555" y2="105" stroke="#8c7038" stroke-width="0.5" stroke-dasharray="2 2"/>
+          <text x="560" y="103">Open Dining · 散席</text>
+          <text x="560" y="117" font-size="9" fill="#6e5536">6 桌 · 24位</text>
+        </g>
+
+        <!-- Service annotations -->
+        <g font-family="Cormorant Garamond, serif" font-style="italic" font-size="8" fill="#6e5536">
+          <text x="20" y="50" transform="rotate(28 20 50)">W.C. ×3</text>
+          <text x="50" y="130" transform="rotate(28 50 130)">接待</text>
+          <text x="100" y="200" transform="rotate(28 100 200)">茶水間</text>
+        </g>
+      </g>
+
+      <!-- ============ Compass + scale ============ -->
+      <g transform="translate(1100, 80)" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6e5536">
+        <circle cx="0" cy="0" r="20" fill="none" stroke="#8c7038" stroke-width="0.5"/>
+        <polygon points="0,-15 4,5 0,2 -4,5" fill="#8c7038"/>
+        <text x="0" y="36" text-anchor="middle">north</text>
+      </g>
+
+      <!-- ============ Legend ============ -->
+      <g transform="translate(60, 820)" font-family="Cormorant Garamond, serif" font-size="9" fill="#1a1815">
+        <text x="0" y="-12" font-style="italic" font-size="10" fill="#6e5536" letter-spacing="0.2em">— LEGEND —</text>
+        
+        <rect x="0" y="0" width="14" height="9" fill="rgba(184,152,90,0.12)" stroke="rgba(140,112,56,0.5)" stroke-width="0.4"/>
+        <text x="22" y="8" font-style="italic">private rooms · 私密包廂</text>
+        
+        <rect x="180" y="0" width="14" height="9" fill="rgba(140,112,56,0.06)" stroke="rgba(140,112,56,0.5)" stroke-width="0.4"/>
+        <text x="202" y="8" font-style="italic">open dining · 散席</text>
+        
+        <rect x="350" y="0" width="14" height="9" fill="url(#axo-corridor)" stroke="rgba(140,112,56,0.5)" stroke-width="0.4"/>
+        <text x="372" y="8" font-style="italic">corridor · 走廊</text>
+        
+        <rect x="510" y="0" width="14" height="9" fill="rgba(110,85,54,0.10)" stroke="rgba(110,85,54,0.4)" stroke-width="0.4"/>
+        <text x="532" y="8" font-style="italic">service zone · 服務區（廚、茶、洗手間）</text>
+      </g>
+
+      <!-- ============ Note ============ -->
+      <g transform="translate(60, 870)" font-family="Cormorant Garamond, serif" font-size="9" fill="#6e5536" font-style="italic">
+        <text x="0" y="0">兩層樓樓梯與電梯核心對齊；八樓四間包廂東牆均設障子假窗（和紙嵌板）。 7F = 251 ㎡ · 8F = 203 ㎡ · 合計 453 ㎡</text>
       </g>
     </svg>
   </div>
 
-  <p class="section-sub" style="margin-top:24px;">
-    兩層樓上下對齊。排水立管於西側內牆，七、八樓洗手間於同一垂直軸上。包廂面向東側立面（窗景）；廚房及核心置於西側。
-  </p>
+  <div class="axo-narrative">
+    <p>
+      上下兩層之關係—— 樓層核心（電梯、樓梯、立管）置中央，左翼為服務區（廚房、洗手間、茶水間），中央走廊作客流之軸，右翼為賓客之席。七、八樓之服務區與洗手間於同一垂直位置上下對齊，沿同一給排水立管，管線最短。新設送餐電梯一座，連通兩層廚房，賓客動線與服務動線分明。
+    </p>
+    <p>
+      <em style="color:var(--gold);font-style:normal">七樓</em>設上海廳大包廂一間（十二位，兩種擺設），南面散席六桌（廿四位）；<em style="color:var(--gold);font-style:normal">八樓</em>設三間私密包廂——香港廳（十六位）、北京廳（十位）、銀座廳（八位）。兩層共七十席。
+    </p>
+  </div>
 </section>
+
 
 <!-- ============ DESIGN REFERENCES (PHOTOREALISTIC RENDERS) ============ -->
 <style>
@@ -3437,7 +3591,7 @@ section.axonometric {
       <div class="sketch-caption">
         <div>
           <div class="sketch-name">包 廂</div>
-          <div class="sketch-name-jp">個 室 — 「 福 」 / 「 壽 」</div>
+          <div class="sketch-name-jp">包 廂 — 上海廳 / 香港廳</div>
         </div>
         <div class="sketch-num">SK / 02</div>
       </div>
@@ -3823,14 +3977,14 @@ section.axonometric {
 
           <!-- Caption corner -->
           <g font-family="Cormorant Garamond, serif" font-size="8" fill="#8c7038" opacity="0.7">
-            <text x="20" y="450" font-style="italic">SK-04 · 大 包 廂 「福」 · 7F · view from doorway</text>
+            <text x="20" y="450" font-style="italic">SK-04 · 上海廳 · 7F · view from doorway</text>
             <text x="580" y="450" text-anchor="end" letter-spacing="0.2em">SHICHIFUKU · GINZA</text>
           </g>
         </svg>
       </div>
       <div class="sketch-caption">
         <div>
-          <div class="sketch-name">大 包 廂</div>
+          <div class="sketch-name">上 海 廳</div>
           <div class="sketch-name-jp">香港廳 — 由 入 口 望 入</div>
         </div>
         <div class="sketch-num">SK / 04</div>
